@@ -1,0 +1,23 @@
+.about {
+    min-height: 600px;
+    padding: 120px 100px 0 0;
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__info {
+        margin-left: 70px;
+    }
+    &__text {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+    }
+    &_about-me {
+        position: relative;
+        @include before_circle;
+        z-index: 2;
+    }
+}
