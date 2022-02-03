@@ -4,6 +4,7 @@
     &__wrapper {
         display: flex;
         justify-content: flex-start;
+        margin: 120px 100px 0 0;
     }
     &__info {
         margin-left: 70px;
@@ -15,9 +16,42 @@
         line-height: 21px;
         color: #000000;
     }
+    &__skills {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        width: 260px;
+        min-height: 115px;
+        margin-bottom: 20px;
+        position: relative;
+        @include before_circle_about;
+        z-index: 2;
+    }
+    &__descr {
+        margin-left: 20px;
+    }
+
     &_about-me {
         position: relative;
         @include before_circle;
         z-index: 2;
+    }
+    &_icon1 {
+        width: 25px;
+        height: 24px;
+    }
+    &_icon2 {
+        width: 14px;
+        height: 25px;
+    }
+    &_icon3 {
+        width: 25px;
+        height: 21px;
     }
 }
