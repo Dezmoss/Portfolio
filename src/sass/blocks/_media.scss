@@ -46,6 +46,24 @@
             margin-top: 60px;
         }
     }
+    //Portfolio
+    .portfolio {
+        padding-top: 40px;
+        &__grid-container {
+            margin-top: 40px;
+            grid-template: repeat(2,280px)/repeat(auto-fit,280px);
+            justify-content: space-around;
+            row-gap: 20px;
+        }
+        &__horizont {
+            grid-column: unset;
+            grid-row: unset;
+        }
+        &__vertical {
+            grid-column: unset;
+            grid-row: unset;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -160,6 +178,13 @@
         &_fz36 {
             font-size: 24px;
             line-height: 36px;
+        }
+    }
+    //Menu
+    .menu {
+        &__social {
+            right: 15%;
+            transform: translateX(-50%);
         }
     }
     //Promo
