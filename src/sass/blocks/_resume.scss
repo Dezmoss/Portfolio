@@ -16,7 +16,7 @@
     }
     &__wrapper {
         display: grid;
-        padding: 60px 89px 0 65px;
+        padding: 60px 65px 0 65px;
         grid-template-columns: repeat(2, 425px);
         column-gap: 135px;
     }
@@ -33,7 +33,7 @@
                 border-radius: 100%;
                 top: 50%;
                 transform: translateY(-50%);
-                left: 0;
+                left: -7px;
             }
         }
         ul {
@@ -43,18 +43,43 @@
                 &:after {
                     content: '';
                     width: 1px;
-                    height: 100%;
+                    height: calc(100% + 16px);
                     position: absolute;
-                    left: -17px;
-                    top: 0px;
+                    top: -16px;
+                    left: 0;
                     background-color: #000;
                 }
             }
         }
     }
     &__item {
+        position: relative;
+        &:before {
+            content: '';
+            height: 1px;
+            width: 43px;
+            position: absolute;
+            background-color: #000;
+            top: 63px;
+        }
         &-head {
-            padding: 0 0 0 100;
+            position: relative;
+            padding: 45px 0 0 100px;
+        }
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+        }
+        &-icon {
+            position: absolute;
+            left: 53px;
+            top: 45px;
+            @include before_circle;
+            img {
+                position: absolute;
+                left: 6px;
+                top: 14px;
+            }
         }
     }
 }
