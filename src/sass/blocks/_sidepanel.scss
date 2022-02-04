@@ -11,14 +11,14 @@
     &__divider {
         width: 2px;
         height: 70px;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
     }
     &__text {
         height: 150px;
         width: 25px;
         font-weight: bold;
         font-size: 16px;
-        color: #ffffff;
+        color: #000000;
         span {
             transform: rotate(-90deg) translate(-38%,-260%);
             display: block;
