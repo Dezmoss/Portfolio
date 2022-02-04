@@ -1,3 +1,4 @@
+//Menu button
 const hamburger = document.querySelector('.hamburger'),
     menu = document.querySelector('.menu'),
     closeElem = document.querySelector('.menu__close');
@@ -10,6 +11,7 @@ closeElem.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 
+//Skill bars
 const percent = document.querySelectorAll('.skills__percent'),
     progress = document.querySelectorAll('.skills__yellow-progress');
 
