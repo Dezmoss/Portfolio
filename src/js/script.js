@@ -45,8 +45,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
     check.addEventListener('click', () => {
             if (check.checked) {
                 btn.disabled = false;
+                btn.style.backgroundColor = '#FFA501';
             } else {
                 btn.disabled = true;
+                btn.style.backgroundColor = 'rgb(192, 191, 191)';
             }
     });
 });

@@ -3,16 +3,19 @@
     padding-top: 120px;
 
     @include section_title;
+
     &__wrapper {
         display: grid;
         padding: 60px 65px 0 65px;
         grid-template-columns: repeat(2, 425px);
         column-gap: 135px;
     }
+
     &__column {
         &-title {
             position: relative;
             padding-left: 35px;
+
             &:before {
                 content: '';
                 position: absolute;
@@ -25,10 +28,13 @@
                 left: -7px;
             }
         }
+
         ul {
             list-style-type: none;
+
             li {
                 position: relative;
+
                 &:after {
                     content: '';
                     width: 1px;
@@ -41,8 +47,10 @@
             }
         }
     }
+
     &__item {
         position: relative;
+
         &:before {
             content: '';
             height: 1px;
@@ -51,23 +59,43 @@
             background-color: #000;
             top: 63px;
         }
+
         &-head {
             position: relative;
             padding: 45px 0 0 100px;
         }
+
         &-body {
             padding-left: 43px;
             margin-top: 12px;
         }
+
         &-icon {
             position: absolute;
             left: 53px;
             top: 45px;
             @include before_circle;
+
             img {
                 position: absolute;
                 left: 6px;
                 top: 14px;
+            }
+        }
+    }
+
+    &__certificat {
+        display: block;
+        margin: 5px auto 0;
+        width: 154px;
+        border: 1px solid $main-color;
+
+        img {
+            transition: all 0.5s;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 3px 3px 20px $main-color;
             }
         }
     }
