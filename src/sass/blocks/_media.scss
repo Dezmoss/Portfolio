@@ -23,12 +23,14 @@
         &__skills {
             margin-right: 0;
             column-gap: 25px;
-            grid-template: repeat(2, minmax(115px, auto))/repeat(2, 250px);
+            grid-template: minmax(115px, auto)/repeat(2, 250px);
         }
 
         &__skills-item {
             grid-template: 1fr/40px 195px;
+
         }
+
     }
 
     //Resume
@@ -73,6 +75,21 @@
         &__vertical {
             grid-column: unset;
             grid-row: unset;
+        }
+    }
+
+    // Contacts
+    .contacts {
+        &__wrapper {
+            grid-template-columns: auto 585px;
+        }
+
+        &__descr {
+            margin-left: 40px;
+        }
+
+        &__form {
+            column-gap: 30px;
         }
     }
 }
@@ -162,6 +179,15 @@
 
     }
 
+    //Contacts
+    .contacts {
+        padding-top: 40px;
+
+        &__photo {
+            display: none;
+        }
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -208,7 +234,7 @@
         }
 
         &__photo {
-            grid-row: unset;
+            // grid-row: unset;
 
             img {
                 object-fit: contain;
@@ -226,6 +252,33 @@
         &__wrapper {
             grid-template-columns: 1fr;
             padding-top: 40px;
+        }
+    }
+
+    //Contacts
+    .contacts {
+        &__wrapper {
+            padding: 0 10px;
+            grid-template-columns: 1fr;
+        }
+
+        &__descr {
+            margin-left: 0;
+        }
+
+        &__form {
+            grid-template: 45px 190px 45px/repeat(auto-fit, 240px);
+        }
+
+        &__btn {
+            width: 150px;
+            padding: 10px 0;
+            font-size: 13px;
+            line-height: 13px;
+        }
+
+        &__triggers {
+            column-gap: 0;
         }
     }
 }
@@ -281,7 +334,14 @@
 
             &-item {
                 justify-self: center;
+                grid-template: 1fr/40px 1fr;
+                margin-left: 10px;
             }
+        }
+
+        &__photo {
+            grid-row: unset;
+            align-self: unset;
         }
     }
 
@@ -332,5 +392,44 @@
             grid-template: minmax(23px, auto) auto/minmax(284px, auto);
         }
 
+    }
+
+    //Contacts
+
+    .contacts {
+        &__textarea {
+            grid-column: 1;
+        }
+
+        &__wrapper {
+            padding: 0;
+        }
+
+        &__form {
+            grid-template: 45px 45px 190px/240px;
+            grid-template-columns: 1fr;
+            column-gap: 0;
+        }
+
+        &__descr {
+            width: 270px;
+        }
+
+        &__mail {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        &__policy {
+            grid-column: 1 / 2;
+            grid-row: 4;
+            margin-top: 0;
+            margin-bottom: 20px;
+            width: 270px;
+        }
+
+        &__btn {
+            grid-row: 5;
+        }
     }
 }
