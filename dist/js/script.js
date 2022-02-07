@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         item.addEventListener('click', ()=> {
             menu.classList.remove('active');
         });
+
     });
           
     overlay.addEventListener('click', (e) => {
@@ -36,5 +37,16 @@ document.addEventListener('DOMContentLoaded', ()=> {
         progress[i].style.width = item.innerText;
     });
 
+    // Submit unblock
 
+    const check = document.querySelector('.check'),
+          btn = document.querySelector('.contacts__btn');
+
+    check.addEventListener('click', () => {
+            if (check.checked) {
+                btn.disabled = false;
+            } else {
+                btn.disabled = true;
+            }
+    });
 });

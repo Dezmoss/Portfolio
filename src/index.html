@@ -59,12 +59,12 @@
 
             <nav>
                 <ul class="menu__list">
-                    <li class="menu__item"><a href="#about" class="title title_fz24 title_white">ПРО МЕНЯ</a></li>
-                    <li class="menu__item"><a href="#resume" class="title title_fz24 title_white">МОЙ ОПЫТ</a></li>
-                    <li class="menu__item"><a href="#skills" class="title title_fz24 title_white">МОИ НАВЫКИ</a></li>
-                    <li class="menu__item"><a href="#portfolio" class="title title_fz24 title_white">МОИ РАБОТЫ</a></li>
-                    <li class="menu__item"><a href="#pricelist" class="title title_fz24 title_white">ПРАЙС-ЛИСТ</a></li>
-                    <li class="menu__item"><a href="#contacts" class="title title_fz24 title_white">КОНТАКТЫ</a></li>
+                    <li class="menu__item"><a target="_self" href="#about" class="title title_fz24 title_white">ПРО МЕНЯ</a></li>
+                    <li class="menu__item"><a target="_self" href="#resume" class="title title_fz24 title_white">МОЙ ОПЫТ</a></li>
+                    <li class="menu__item"><a target="_self" href="#skills" class="title title_fz24 title_white">МОИ НАВЫКИ</a></li>
+                    <li class="menu__item"><a target="_self" href="#portfolio" class="title title_fz24 title_white">МОИ РАБОТЫ</a></li>
+                    <li class="menu__item"><a target="_self" href="#pricelist" class="title title_fz24 title_white">ПРАЙС-ЛИСТ</a></li>
+                    <li class="menu__item"><a target="_self" href="#contacts" class="title title_fz24 title_white">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
 
@@ -87,8 +87,8 @@
             <div class="title title_fz16 promo__subtitle">Меня зовут Денис Кузнецов</div>
             <h1 class="title title_fz48 promo__title">Я Frontend-разработчик из города Гомель</h1>
             <div class="promo__btns">
-                <a href="#portfolio" class="promo__link btn">Портфолио</a>
-                <a href="#about" class="promo__link promo__link_white">Про меня</a> 
+                <a target="_self" href="#portfolio" class="promo__link btn">Портфолио</a>
+                <a target="_self" href="#about" class="promo__link promo__link_white">Про меня</a> 
             </div>
         </div>
     </section>
@@ -103,7 +103,7 @@
                     <h2 class="title title_fz16 about__title">Про меня</h2>
                     <div class="title title_fz36 about__subtitle">Меня зовут Денис</div>
                     <div class="divider"></div>
-                    <p class="about__text">Я начинающий Frontend-разработчик, занимаюсь версткой сайтов по дизайнерским макетам, созданием динамического функционала с помощью JavaScript и React.js, а так же адаптацией сайтов под устройства всех видов. В работе использую Git, GitHUB, препроцессоры SASS/SCSS, сборщик проектов Gulp, методологию BEM, а так же библиотеки Bootstrap и jQuery. Активно обучаюсь на курсах по Web-разработке и программированию.</p>
+                    <p class="about__text">Я начинающий Frontend-разработчик, занимаюсь версткой сайтов по дизайнерским макетам, созданием динамического функционала с помощью JavaScript и React.js, а так же адаптацией дизайна сайтов под устройства всех типов. В работе использую Git, GitHUB, препроцессоры SASS/SCSS, сборщик проектов Gulp, методологию BEM, а так же библиотеки Bootstrap и jQuery. Активно обучаюсь на курсах по Web-разработке и программированию.</p>
                 </div>
                 <div class="about__skills">
                     <div class="about__skills-item">
@@ -390,10 +390,10 @@
                         </div>
 
                         <div class="contacts__triggers">
-                            <button class="title title_fz14 btn contacts__btn">Отправить сообщение</button>
+                            <button disabled class="title title_fz14 btn contacts__btn">Отправить сообщение</button>
                             <div class="contacts__policy">
-                                <input required type="checkbox">
-                                <span>Я согласен(а) с <a href="/">политикой конфиденциальности</a></span>
+                                <input class="check" required type="checkbox">
+                                <span>Я согласен(а) с <a href="policy.html">политикой конфиденциальности</a></span>
                             </div>
                         </div>
                        

@@ -193,6 +193,7 @@
 @media (max-width: 768px) {
     .container {
         width: 540px;
+
     }
 
     .title {
@@ -403,10 +404,12 @@
 
         &__wrapper {
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
 
         &__form {
-            grid-template: 45px 45px 190px/240px;
+            grid-template: 45px 45px 190px/1fr;
             grid-template-columns: 1fr;
             column-gap: 0;
         }
