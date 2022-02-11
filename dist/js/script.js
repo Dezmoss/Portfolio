@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', ()=> {
+document.addEventListener('DOMContentLoaded', () => {
 
     //Menu button
     const hamburger = document.querySelector('.hamburger'),
@@ -14,15 +14,15 @@ document.addEventListener('DOMContentLoaded', ()=> {
     });
 
     const overlay = document.querySelector('.menu__overlay'),
-          menuLinks = document.querySelectorAll('.menu__list a');
+        menuLinks = document.querySelectorAll('.menu__list a');
 
     menuLinks.forEach(item => {
-        item.addEventListener('click', ()=> {
+        item.addEventListener('click', () => {
             menu.classList.remove('active');
         });
 
     });
-          
+
     overlay.addEventListener('click', (e) => {
         if (e.target && e.target === overlay) {
             menu.classList.remove('active');
@@ -40,15 +40,33 @@ document.addEventListener('DOMContentLoaded', ()=> {
     // Submit unblock
 
     const check = document.querySelector('.check'),
-          btn = document.querySelector('.contacts__btn');
+        btn = document.querySelector('.contacts__btn');
 
     check.addEventListener('click', () => {
-            if (check.checked) {
-                btn.disabled = false;
-                btn.style.backgroundColor = '#FFA501';
-            } else {
-                btn.disabled = true;
-                btn.style.backgroundColor = 'rgb(192, 191, 191)';
-            }
+        if (check.checked) {
+            btn.disabled = false;
+            btn.style.backgroundColor = '#FFA501';
+        } else {
+            btn.disabled = true;
+            btn.style.backgroundColor = 'rgb(192, 191, 191)';
+        }
+    });
+
+    $('form').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            $('form').trigger('reset');
+        });
+        btn.disabled = true;
+        btn.style.backgroundColor = 'rgb(192, 191, 191)';
+        check.checked = false;
+        $(this).find("input").val("");
+        $('form').trigger('reset');
+        return false;
     });
 });
